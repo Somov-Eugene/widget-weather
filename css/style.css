@@ -9,3 +9,131 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: "Faustina", serif;
+  font-weight: 400;
+  color: #202020;
+  background-color: #ffffff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.weather {
+  color: #f0f0f0;
+  background-color: #223c54;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.weather__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather__loading img {
+  max-width: 100px;
+}
+
+.weather__header {
+  display: flex;
+}
+
+.weather__main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.weather__city {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.weather__status {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.weather__body {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.weather__icon img {
+  max-width: 50px;
+}
+
+.weather__temp {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.weather__feels-like,
+.weather__humidity,
+.weather__pressure {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.weather__feels-like span,
+.weather__humidity span,
+.weather__pressure span {
+  font-weight: 700;
+}
+
+.weather__temp::after,
+.weather__feels-like::after {
+  content: '\2103'; /* Degree Celsius */
+  display: inline-block;
+  margin-left: 3px;
+  font-weight: 400;
+}
+
+.weather__humidity::after {
+  content: '%';
+  display: inline-block;
+  margin-left: 3px;
+  font-weight: 400;
+}
+
+.weather__pressure::after {
+  content: 'hPa';
+  display: inline-block;
+  margin-left: 3px;
+  font-weight: 400;
+}
+
+.weather__error {
+  font-size: 18px;
+}
