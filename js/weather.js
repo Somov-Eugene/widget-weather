@@ -40,7 +40,7 @@ const showError = (message) => {
 const loaderWeather = async (latitude = "55.7522", longitude = "37.6156") => {
   const units = "metric";
   const language = "en";
-  const API_KEY = "5c52978c6bfd04742715a7e3df6cf6f4";
+  const API_KEY = "5c52978c6bfd04742715a7e3df6cf6f4"; // unactive
   const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&lang=${language}&appid=${API_KEY}`;
 
   const response = await fetch(URL, { method: "GET" });
